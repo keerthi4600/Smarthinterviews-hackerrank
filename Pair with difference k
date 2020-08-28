@@ -1,0 +1,20 @@
+def findPair(arr,k): 
+    i,j = 0,1
+    while i < n and j < n: 
+        if i != j and arr[j]-arr[i] == k: 
+            return True
+        elif arr[j] - arr[i] < k: 
+            j+=1
+        else: 
+            i+=1
+    return False
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    arr=list(map(int,input().split()))[:n]
+    arr.sort()
+    res=findPair(arr,k)
+    if(res):
+        print('true')
+    else:
+        print('false')
