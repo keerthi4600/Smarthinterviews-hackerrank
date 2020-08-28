@@ -1,0 +1,10 @@
+import math
+t=int(input())
+for i in range(t):
+    n=int(input())
+    if n>0:
+        ans = n**(1./3.)
+        print(math.ceil(ans))
+    else:
+        ans = -((-n)**(1./3.))
+        print(math.floor(ans))
