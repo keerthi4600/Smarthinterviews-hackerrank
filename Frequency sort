@@ -1,0 +1,7 @@
+t=int(input())
+for i in range(t):
+    n=int(input())
+    lst=list(map(int,input().strip().split(' ')))[:n]
+    lst.sort()
+    res = sorted(lst, key = lst.count)
+    print(*res)
