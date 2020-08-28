@@ -1,0 +1,13 @@
+t=int(input())
+for i in range(t):
+    a=int(input())
+    arr = list(map(int,input().strip().split(' ')))[:a]
+    d={}
+    for i in range(a):
+        if arr[i] in d:
+            d[arr[i]]+=1
+        else:
+            d[arr[i]]=1
+    res = [i for i,j in d.items() if j==1]
+    for i in res:
+        print(i)
